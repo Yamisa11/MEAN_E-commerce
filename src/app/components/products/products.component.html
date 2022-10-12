@@ -1,0 +1,32 @@
+<!-- <div class="card-top container-fluid">
+    <div class="d-flex" style="background-color: white ;">
+        <div class="item">
+            <a>
+                <label><img src="../../../assets/images/fruit.png">fruits</label>
+            </a>
+        </div>
+        <div class="item">
+            <a href=""><label><img src="../../../assets/images/veges.jpg">vegetables</label>
+            </a>
+        </div>
+    </div>
+</div> -->
+<section>
+    <div class="container">
+        <h1 class="heading">Fruit and Veg</h1>
+        <div class="row">
+            <ng-container *ngFor="let item of productList ">
+                <div class="card col-md-3" style="margin: 15px 15px; width: 250px;">
+                    <img src ="{{item.image}}" alt="fruit/veg image" style="width:150px ; height: 150px;">
+                    <h5>{{item.title}}</h5>
+                    <p>{{item.description}}</p>
+                   <strong> <p>Price: R{{item.price}}</p></strong> 
+                    <div class="below">
+                        <button class="btn"  style="background-color: #57D657; width: 90%; margin-bottom: 0px;" (click)="addtoCart(item)">Add to cart</button>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</section>
+ 

@@ -1,0 +1,54 @@
+<ng-container *ngIf="products.length !=0">
+  <div class="container">
+    <div class="card-table">
+        <div class="cart-product">
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Name</th>
+                        <th>Image</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of products; let i = index">
+                        <td>{{i+1}}</td>
+                        <td>{{item.title}}</td>
+                        <td><img style="width: 90px;" src="{{item.image}}"></td>
+                        <td>{{item.description}}</td>
+                        <th>{{item.price}}</th>
+                        <td>{{item.quantity}}</td>
+                        <td>{{item.total}}</td>
+                        <td><button  (click)="removeItem(item)" style="border-color: white ;"><img src="../../../assets/images/delete-icon.png" style="width:20px ;"></button></td>
+                    </tr>
+                 <tr>
+                    <td>
+                        <strong>Total: R{{grandTotal}}</strong>
+                    </td>
+                 </tr>
+                </tbody>
+            </table>
+
+           
+        </div>
+    </div>
+    <button (click)="emptyCart()" class="btn">Empty cart</button>
+    <button routerLink="/products" class="btn">Shop</button>
+
+  </div>
+</ng-container>
+
+<ng-container *ngIf="products.length ==0">
+    <div class="container">
+        <div class="center">
+            <img src="../../../assets/images/cart.png" alt="empty cart image">
+            <h4>Your cart is empty!</h4>
+            <button class="btn" routerLink="/products">Shop now!</button>
+        </div>
+    </div>
+</ng-container>

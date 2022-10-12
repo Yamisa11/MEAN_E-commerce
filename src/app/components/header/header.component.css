@@ -1,0 +1,10 @@
+.badge{
+    font-size: 12px;
+    color: white;
+    background-color: rgb(252, 76, 76);
+    margin-top: 18px;
+
+}
+.navbar{
+    position: sticky;
+}

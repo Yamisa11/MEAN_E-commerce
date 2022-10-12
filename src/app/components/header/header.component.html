@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg" style="background-color:#57D657 ;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="../../../assets/images/logo.jpg" style="width: 45px; border-radius:50%"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/products">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/cart">Cart</a>
+        </li>
+      </ul>
+      
+      <button class="btn" routerLink="cart">
+        <img src="../../../assets/images/cart-logo.jpg" style="width: 40px; border-radius: 50%;">
+      </button>
+      <div class="badge bd-danger">{{totalItem}}</div>
+     
+    </div>
+  </div>
+</nav>
